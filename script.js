@@ -6,11 +6,12 @@ const keyBtns = document.querySelectorAll(".number, .dot, .operator");
 const deleteBtn = document.querySelector(".delete");
 const startBtn = document.querySelector(".start");
 const operateBtn = document.querySelector(".operate");
+const piBtn = document.querySelector(".pi");
 const regex = {
     sumOrSubtract: /(\d+(?:\.?\d*))\s*([\+\-])\s*(\d+(?:\.?\d*))/,
     multiplyDivisionOrRemainder: /(\d+(?:\.?\d*))\s*([\*\/\%])\s*(\d+(?:\.?\d*))/,
     power: /(\d+(?:\.?\d*))\s*([\^])\s*(\d+(?:\.?\d*))/,
-    verify: /([a-zA-Z]+|[\+\-\*\/\^]{2,})/,
+    verify: /([a-zA-Z]+|[\+\-\*\/\^]{2,}|\d+.\d+.)/,
 };
 let isOn = false;
 
@@ -39,6 +40,7 @@ function renderingOperation() {
     if (verifyExpression(expression)) {
         input.value = "";
         output.textContent = "ERROR";
+        return;
     }
 
     output.textContent = makeAllOperations(expression);
@@ -87,3 +89,7 @@ keyBtns.forEach(elem => elem.addEventListener("click", addChar));
 operateBtn.addEventListener("click", renderingOperation);
 deleteBtn.addEventListener("click", deleteChar);
 startBtn.addEventListener("click", startCalculator);
+piBtn.addEventListener("click", () => {
+    if (!isOn) return;
+    input.value += (Math.PI).toFixed(2);
+})

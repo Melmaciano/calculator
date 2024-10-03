@@ -5,8 +5,8 @@ const buttons = [
         {value: "7", class: "number"},
         {value: "8", class: "number"},
         {value: "9", class: "number"},
+        {value: "π", class: "pi"},
         {value: "%", class: "operator"},
-        {value: "√", class: "operator"},
     ],
     [
         {value: "+/-", class: "sign"},
