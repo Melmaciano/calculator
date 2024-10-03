@@ -11,7 +11,7 @@ const regex = {
     sumOrSubtract: /(\d+(?:\.?\d*))\s*([\+\-])\s*(\d+(?:\.?\d*))/,
     multiplyDivisionOrRemainder: /(\d+(?:\.?\d*))\s*([\*\/\%])\s*(\d+(?:\.?\d*))/,
     power: /(\d+(?:\.?\d*))\s*([\^])\s*(\d+(?:\.?\d*))/,
-    verify: /([a-zA-Z]+|[\+\-\*\/\^]{2,}|\d+.\d+.)/,
+    verify: /([a-zA-Z]+|[\+\-\*\/\^]{2,}|\d+\.\d+\.)/,
 };
 let isOn = false;
 
