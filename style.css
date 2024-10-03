@@ -1,0 +1,138 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    background-color: #2e2e2e;
+    margin: 1% auto;
+    padding-top: 0.1px;
+    width: 300px;
+    aspect-ratio: 3/4;
+    border-radius: 40px 40px 30px 30px;
+    display: flex;
+    flex-direction: column
+}
+
+.calculator-top {
+    background-color: #131313;
+    margin: 3% auto 0;
+    padding-top: 0.1px;
+    width: 94%;
+    border-radius: 30px 30px 10px 10px;
+    box-shadow: 0 0 2px 5px #414141;
+    display: flex;
+    flex-direction: column;
+    flex: 3 1 0;
+}
+
+.brand-model {
+    color: white;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+    flex: 4;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.screen {
+    width: 90%;
+    background-color: #666666;
+    box-shadow: 0 0 2px 1px #666666;
+    margin: auto auto 8%;
+    border-radius: 10px;
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.brightness {
+    content: "";
+    position: absolute;
+    width: 252px;
+    height: 65px;
+    border-radius: 10px;
+    opacity: 0.8;
+    box-shadow: 0 0 2px 2px #b6b6b6;
+    background-color: #b6b6b6;
+    transform: scaleY(0);
+    transition: transform 0.2s;
+}
+
+.input-operation, .output-operation {
+    flex: 1;
+    text-align: end;
+    text-shadow: 0 0 1px #272727;
+    z-index: 1;
+}
+
+.input-operation {
+    color: #0f0f0f;
+    font-size: 1.5em;
+    margin: 0 3%;
+    background: none;
+    border: none;
+}
+
+.output-operation {
+    color: #383838;
+    font-size: 1.2em;
+    margin: 0 6%;
+}
+
+.calculator-bottom {
+    background-color: #dfdfdf;
+    margin: 5% auto 3%;
+    width: 94%;
+    border-radius: 10px 10px 30px 30px;
+    box-shadow: 0 0 2px 2px #414141;
+    flex: 4 1 0;
+}
+
+.keyboard {
+    width: 95%;
+    height: 90%;
+    margin: 2.5% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    flex: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    width: 14%;
+    aspect-ratio: 1;
+    color: white;
+    background-color: #272727;
+    border-radius: 5px;
+    box-shadow: 0 0 0.5px 1px #414141;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: transform 0.1s;
+}
+
+.number, .dot {
+    background-color: #131313;
+}
+
+.delete {
+    background-color: #bb0000;
+}
+
+.button:active {
+    transform: translateY(3%);
+}
